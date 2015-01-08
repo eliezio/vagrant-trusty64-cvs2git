@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
+set -e -x
 
 sudo apt-get -qq update
 

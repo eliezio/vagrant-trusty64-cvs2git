@@ -68,7 +68,11 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install apache2
   # SHELL
 
-  config.vm.provision "shell", path: "base-tools.sh"
+  config.vm.provision "file", source: ".pam_environment", destination: ".pam_environment"
+
+  config.vm.provision "shell", path: "setup-locales.sh"
+
+  config.vm.provision "shell", path: "install-pkgs.sh"
 
   config.vm.provision "shell", path: "cvs2git-tools.sh"
 
