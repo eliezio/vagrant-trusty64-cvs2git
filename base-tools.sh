@@ -2,7 +2,7 @@
 
 set -x
 
-#sudo apt-get -qq update
+sudo apt-get -qq update
 
 REQUIRED_PKGS="git bison flex cmake wget bsdtar g++"
 
